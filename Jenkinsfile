@@ -7,9 +7,6 @@ pipeline {
                 sh 'php --version'
             }
         }
-    }
-
-    stages {
         stage('build backend') {
             agent { docker { image 'node' } }
             steps {
